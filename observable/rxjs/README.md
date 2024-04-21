@@ -253,6 +253,9 @@ protected final void notify(T notification) {
 ### 29. when to consider conversting obser from cold to hot?
 ![image](https://github.com/3aLaee/paradigms-prep/assets/102328514/1a9c8c9a-a851-4d14-824a-dd1d5cd69608)
 example: ![image](https://github.com/3aLaee/paradigms-prep/assets/102328514/d84914ad-cf21-40c3-b792-facc55a6dd56)
+### 30. Convert the example to hot:
+![image](https://github.com/3aLaee/paradigms-prep/assets/102328514/6d67304d-0ce5-40ad-8e95-7ad0e806df7c)
+
 
 
 
