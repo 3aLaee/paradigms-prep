@@ -250,3 +250,9 @@ protected final void notify(T notification) {
 - Returns another observable (nothing happens); just encapsulates a new plan, data hasn’t been produced yet. Customizing the plan with pipe, and the result is the new plan(a new observable), hence, it will produce exactly what we want. The advantage of pipelining is separating planning from execution.
 ### 28. What is the advantage of pipelining?
 - Separating planning from execution.
+### 29. when to consider conversting obser from cold to hot?
+![image](https://github.com/3aLaee/paradigms-prep/assets/102328514/1a9c8c9a-a851-4d14-824a-dd1d5cd69608)
+example: ![image](https://github.com/3aLaee/paradigms-prep/assets/102328514/d84914ad-cf21-40c3-b792-facc55a6dd56)
+
+
+
