@@ -255,6 +255,26 @@ protected final void notify(T notification) {
 example: ![image](https://github.com/3aLaee/paradigms-prep/assets/102328514/d84914ad-cf21-40c3-b792-facc55a6dd56)
 ### 30. Convert the example to hot:
 ![image](https://github.com/3aLaee/paradigms-prep/assets/102328514/6d67304d-0ce5-40ad-8e95-7ad0e806df7c)
+### 31. Explain the RxJS Artifacts
+Observable: This is a representation of any set of values over any amount of time. This is the most basic building block of RxJS. Observables are lazy Push collections of multiple values. They fill the role of the producer and are responsible for "emitting" data to subscribers.
+Observer: An observer is an object with callback methods to handle different types of notifications sent by the Observable: next, error, and complete. An observer subscribes to an Observable to start receiving these notifications.
+Subscription: This represents the execution of an Observable and is what an Observable returns when you subscribe to it. A Subscription has a crucial method, unsubscribe, that you can call to cancel the execution and clean up any resources that were set up during subscription.
+Subscriber: It is a type of Observer with the added ability to control the subscription and unsubscription process. A Subscriber wraps around an Observer and ensures that the unsubscribe method is called at the right time.
+Subject: A Subject is a special type of Observable that allows values to be multicasted to many Observers. While plain Observables are unicast (each subscribed Observer owns an independent execution of the Observable), Subjects are multicast, meaning the Subject's subscribed Observers share the same execution path.
+### 32. Discuss the RXJS features
+Execution Canceling: RxJS provides the ability to cancel the execution of an Observable using a Subscription. When you subscribe to an Observable, you receive a Subscription object, which you can call unsubscribe on to cancel the execution and prevent further data from being emitted.
+Pipelining: In RxJS, you can build a pipeline of operators, which are functions that take an Observable as input and return a new Observable. This allows you to perform operations on the data emitted by Observables, such as transforming, filtering, and combining streams.
+Operators: These are pure functions that provide all the functionality needed to transform, combine, manage events, and execute asynchronous queries. There are numerous operators for tasks like map, filter, merge, concat, catchError, and many more, which allow complex asynchronous code to be structured in a declarative, functional style.
+### 33. Discuss the process of unsubscription
+The process of unsubscription can be initiated by the consumer of the Observable by calling unsubscribe manually. Moreover, RxJS Observables often complete naturally if they represent finite data sources. Upon completion, they automatically unsubscribe their subscribers. However, for infinite data sources, like mouse movements or other user input, manual unsubscription is critical for preventing memory leaks. Unsubscription can also occur if an error is emitted by an Observable or if it sends a complete notification. RxJS ensures that in such cases, subscriptions are automatically cleaned up. This behavior helps maintain the integrity of the application and avoids the common pitfalls associated with event-based programming.
+### 34. Code output
+![image](https://github.com/3aLaee/paradigms-prep/assets/102328514/d3b1837d-6bd2-47c6-8ddf-a0fc6c900dc4)
+
+
+
+
+
+
 
 
 
